@@ -6,11 +6,12 @@ Simulate 3 chromosomes in parallel, drop the simulated genotypes through the fou
 
 
 ## C++ codes
-Note, if the compilations don't work, please use the -std=c++11 flag.
+Note, if the compilations don't work, please use the -std=c++11 flag.  Commercial libraries were avoided here.
 
 
 ### pedsort.cpp
 This program sort a pedigree, so that,
+
 1. an offspring appears after its parents
 2. id appear in pa and ma column only will be given a name in id column.
 3. new id name is the line number, which starts from 1.
@@ -23,7 +24,7 @@ This program sort a pedigree, so that,
 
 Example:
 
-./pedsort < unsorted-pedigree > sorted-pedigree
+* ./pedsort < unsorted-pedigree > sorted-pedigree
 
 
 ### extped.cpp
@@ -38,7 +39,7 @@ This program add ideal ID number in front of the sorted pedigree.  Old id number
 
 Example:
 
-gawk '{print $2, $3}' sorted-pedigree | ./extped 10 > extd.ped
+* gawk '{print $2, $3}' sorted-pedigree | ./extped 10 > extd.ped
 
 
 ### pgsnp.cpp
@@ -53,7 +54,7 @@ This program is a forward simulator to generate a Fisher-Wright balanced populat
 
 Example:
 
-./pgsnp 100 10000 1 1 > ideal.pop
+* ./pgsnp 100 10000 1 1 > ideal.pop
 
 
 ### pdrop.cpp
@@ -68,7 +69,7 @@ Drop the genotypes from an ideal population through the founders of a pedigree.
 
 Example:
 
-./pgsnp 100 10000 1 1 | ./pdrop extended-pedigree Ne
+* ./pgsnp 100 10000 1 1 | ./pdrop extended-pedigree Ne
 
 
 ### cmerge.cpp
@@ -83,7 +84,7 @@ Merge several chromosomes of genotypes from pdrop into one file.
 
 Example:
 
-./cmerge 1.gt 2.gt > a.gt
+* ./cmerge 1.gt 2.gt > a.gt
 
 
 ### amatrix.cpp
@@ -98,7 +99,7 @@ Calculate the numerical relationship matrix of a pedigree.
 
 Example:
 
-gawk '{print $2, $3}' lnw139.ped | ./amatrix > A
+* gawk '{print $2, $3}' lnw139.ped | ./amatrix > A
 
 
 ### viewg.cpp
@@ -113,7 +114,7 @@ View the results of an A or G matrix.
 
 Example:
 
-gawk '{print $2, $3}' lnw139.ped | ./amatrix | ./viewg 4 | head
+* gawk '{print $2, $3}' lnw139.ped | ./amatrix | ./viewg 4 | head
 
 
 
