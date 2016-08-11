@@ -73,22 +73,54 @@ Example:
 
 ### cmerge.cpp
 Merge several chromosomes of genotypes from pdrop into one file.
+
 |Item|Description|
 |---:|:---|
 | Input | none |
 | Output | nID nLocus (bp freq) (genotypes by locus)|
 | Arguments | all the genotype file names|
-| Compiltion | g++ -O2 -o cmerge cmerge.cpp|
+| Compilation | g++ -O2 -o cmerge cmerge.cpp|
 
 Example:
 
 ./cmerge 1.gt 2.gt > a.gt
 
 
+### amatrix.cpp
+Calculate the numerical relationship matrix of a pedigree.
+
+|Item|Description|
+|---:|:---|
+| Input | pa ma |
+| Output | nid (lower triangle of A elements in binary) |
+| Argument | none |
+| Compilation | g++ -O2 -o amatrix amatrix.cpp|
+
+Example:
+
+gawk '{print $2, $3}' lnw139.ped | ./amatrix > A
+
+
+### viewg.cpp
+View the results of an A or G matrix.
+
+|Item|Description|
+|---:|:---|
+| Input | A or G |
+| Output | decimal of binary |
+| Argument | [precision] |
+| Compilation | g++ -O2 -o amatrix amatrix.cpp|
+
+Example:
+
+gawk '{print $2, $3}' lnw139.ped | ./amatrix | ./viewg 4 | head
+
+
 
 ## Data files
 ### lnw139.ped
 * This is a sample pedigree was adapted from Lynch and Walsh 1996, pp139.
+
 
 
 ## Bug history

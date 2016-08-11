@@ -5,12 +5,12 @@
 # / ___ \  \__ \ (__| |  | | |_) | |_  | \__ \ | (_| | \__ \ || (_) | |  | |_| |
 #/_/   \_\ |___/\___|_|  |_| .__/ \__| |_|___/  \__,_| |___/\__\___/|_|   \__, |
 #                          |_|                                            |___/ 
-# Cross-validation with sequence mutations
+# Create 3 chromosomes for each ID in a pedigree.
 #                                                  by Xijiang Yu
 #                                                  Aug. 11, 2016
 
-cp makefile.drop Makefile
-make
+make -f drop.makefile
+
 nchr=3
 ne=10
 ng=10000
