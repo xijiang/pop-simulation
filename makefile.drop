@@ -1,7 +1,7 @@
 CC = g++
 CXXFLAGS = -O2
 
-target = extped pdrop pedsort pgsnp
+target = pedsort extped pgsnp pdrop cmerge
 
 all:	$(target)
 .PHONY:	clean

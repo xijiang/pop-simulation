@@ -106,19 +106,22 @@ int main(int argc, char *argv[])
   {
     int i, j, k, olc{0};
     for(auto&p:frq) p=0;
-    for(i=ne; i<tid; ++i) for(j=0; j<2; ++j) for(k=0; k<nlc; ++k)
-					      frq[k] += snp[i][j][k];
+    for(i=ne; i<tid; ++i) for(j=0; j<2; ++j)
+			    for(k=0; k<nlc; ++k)
+			      frq[k] += int(snp[i][j][k] - '0');
     k = (tid - ne) * 2;
     for(i=0; i<nlc; ++i){
       oo[i] = (frq[i]!=0 && frq[i]!=k);
       if(oo[i]) ++olc;
     }
+    std::cout<<tid-ne<<'\n'<<olc<<'\n';
     for(i=0; i<nlc; ++i) if(oo[i]) std::cout<<bp[i]<<' '<<frq[i]<<'\n';
-    for(i=0; i<nlc; ++i){
-      if(oo[i]) for(j=ne; j<tid; ++j)
-		  std::cout<<int(snp[j][0][i] + snp[j][1][i] - '0');
-      std::cout<<'\n';
-    }
+    for(i=0; i<nlc; ++i)
+      if(oo[i]){
+	for(j=ne; j<tid; ++j)
+	  std::cout<<int(snp[j][0][i] + snp[j][1][i] - '0' - '0');
+	std::cout<<'\n';
+      }
   }
   std::clog<<"... Done.";
   return 0;

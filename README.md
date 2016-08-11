@@ -1,7 +1,8 @@
 # Population simulation project
 
 ## Bash drivers
-
+### drop.sh
+Simulate 3 chromosomes in parallel, drop the simulated genotypes through the founders of lnw139.ped into the pedigree.  Then merge the 3 files into one.
 
 
 ## C++ codes
@@ -28,11 +29,12 @@ Example:
 ### extped.cpp
 This program add ideal ID number in front of the sorted pedigree.  Old id numbers are added by Ne-1. Hence ID in extended pedigree starts from 0.
 
-Description:
-* Input: pa ma
-* Output: pa ma
-* Argument: Ne
-* Compilation: g++ -O2 -o extped extped.cpp
+|Item|Description|
+|---:|:---|
+| Input | pa ma |
+| Output | pa ma |
+| Argument | Ne |
+| Compilation | g++ -O2 -o extped extped.cpp|
 
 Example:
 
@@ -42,11 +44,12 @@ gawk '{print $2, $3}' sorted-pedigree | ./extped 10 > extd.ped
 ### pgsnp.cpp
 This program is a forward simulator to generate a Fisher-Wright balanced population.
 
-Description:
-* Input: none
-* Output: nID nLocus (snps-by-haplotype) (bp freq)
-* Arguments: Ne nGeneration chromosome-length-in-Morgan mutation-rate/meiossis/Morgan
-* Compilation: g++ -O2 -o pgsnp pgsnp.cpp
+|Item|Description|
+|---:|:---|
+| Input | none |
+| Output | nID nLocus (snps-by-haplotype) (bp freq) |
+| Arguments | Ne nGeneration chromosome-length-in-Morgan mutation-rate/meiossis/Morgan|
+| Compilation | g++ -O2 -o pgsnp pgsnp.cpp |
 
 Example:
 
@@ -56,11 +59,12 @@ Example:
 ### pdrop.cpp
 Drop the genotypes from an ideal population through the founders of a pedigree.
 
-Description:
-* Input: file from pgsnp.
-* Output: nID nLocus (bp freq) (genotypes by locus)
-* Arguments: extended-pedigree Ne
-* Compilation: g++ -O2 -o pdrop pdrop.cpp
+|Item|Description|
+|---:|:---|
+| Input | file from pgsnp. |
+| Output | nID nLocus (bp freq) (genotypes by locus) |
+| Arguments | extended-pedigree Ne |
+| Compilation | g++ -O2 -o pdrop pdrop.cpp |
 
 Example:
 
@@ -69,8 +73,12 @@ Example:
 
 ### cmerge.cpp
 Merge several chromosomes of genotypes from pdrop into one file.
-* Input: none.
-* Output: nID nLocus (bp freq) (genotypes by locus)
+|Item|Description|
+|---:|:---|
+| Input | none |
+| Output | nID nLocus (bp freq) (genotypes by locus)|
+| Arguments | all the genotype file names|
+| Compiltion | g++ -O2 -o cmerge cmerge.cpp|
 
 Example:
 

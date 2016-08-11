@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
   
   int      nch(argc-1);
   ifstream fin[nch];
-  int      i, j, nid, nlc[nch], freq, tlc{0};
+  int      i, j, nid, nlc[nch], bp, freq, tlc{0};
   string   ts;
 
   for(i=0; i<nch; ++i){
@@ -32,8 +32,8 @@ int main(int argc, char *argv[])
   
   for(i=0; i<nch; ++i)
     for(j=0; j<nlc[i]; ++j) {
-      fin[i]>>freq;
-      cout<<freq<<'\n';
+      fin[i]>>bp>>freq;
+      cout<<bp<<' '<<freq<<'\n';
     }
   for(i=0; i<nch; ++i)
     for(j=0; j<nlc[i]; ++j){
