@@ -1,9 +1,6 @@
 /**
  * # ID start from 1, hence ID will be added ne-1 in extended.ped
  *
- * This is a new version of pedigree sort, which I have written several times.
- * Every time I am facing the same question, I feel I can program better. 
- * This may be a bad habit.
  *                                                            by Xijiang Yu
  *                                                            Apr. 13, 2015
  */
