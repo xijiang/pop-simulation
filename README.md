@@ -1,5 +1,8 @@
 # Population simulation project
-==
+
+## Bash drivers
+
+
 ## C++ codes
 Note, if the compilations don't work, please use the -std=c++11 flag.
 
@@ -11,9 +14,10 @@ This program sort a pedigree, so that,
 3. new id name is the line number, which starts from 1.
 
 Description:
-* Input: id pa ma other-info
-* Output: id pa ma original-id-name other-info
-* Compilation: g++ -O2 -o pedsort pedsort.cpp
+|---:|:---|
+| Input | id pa ma other-info|
+| Output | id pa ma original-id-name other-info|
+| Compilation | g++ -O2 -o pedsort pedsort.cpp|
 
 Example:
 
@@ -51,5 +55,3 @@ Example:
 ## Data files
 ### lnw139.ped
 * This is a sample pedigree was adapted from Lynch and Walsh 1996, pp139.
-
-## Bash drivers

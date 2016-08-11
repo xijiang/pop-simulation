@@ -1,0 +1,9 @@
+CC = g++
+CXXFLAGS = -O2
+
+target = extped pdrop pedsort pgsnp
+
+all:	$(target)
+.PHONY:	clean
+clean:
+	rm -f $(target)
