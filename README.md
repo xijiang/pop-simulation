@@ -117,6 +117,18 @@ Example:
 * gawk '{print $2, $3}' lnw139.ped | ./amatrix | ./viewg 4 | head
 
 
+### trdgpt.cpp
+Given a sorted pedigre, phenotype variance and heritability (h^2), this program simulates the genotypes and phenotypes for everybody in the pedigree.
+
+|Item|Description|
+|---:|:---|
+| Input | (id pa ma) |
+| Output | (id pa ma genotype phenotype) |
+| Argument | V_p h2 |
+| Compilation | g++ -O2 -o trdgpt trdgpt.cpp|
+
+
+
 
 ## Data files
 ### lnw139.ped
