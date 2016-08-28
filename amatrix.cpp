@@ -17,23 +17,12 @@
  *                                                  Aug. 04, 2016
  */
 
-#include <iostream>
-#include <vector>
+#include "pedigree.hpp"
 
-typedef double FLTT;
-//typedef float FLTT;
-
-class parent{
-public:
-  int pa;
-  int ma;
-  parent(int a, int b):pa(a),ma(b){};
-};
-
-void amatrix(std::vector<parent>ped, FLTT*A){ //the tabular method
-  int n(ped.size());
-  int i, j, pa, ma;
-  FLTT td;
+void amatrix(std::vector<parent>&ped, double*A){ //the tabular method
+  int    n(ped.size());
+  int    i, j, pa, ma;
+  double td;
 
   for(i=0; i<n; ++i){
     pa = ped[i].pa;
@@ -49,24 +38,4 @@ void amatrix(std::vector<parent>ped, FLTT*A){ //the tabular method
       A[i*n+j] = A[j*n+i] = td;
     }
   }
-}
-
-
-int main(int argc, char *argv[])
-{
-  std::vector<parent>ped;
-  int  pa, ma, n, i, j, k;
-
-  while(std::cin>>pa>>ma) ped.push_back(parent(pa,ma));
-
-  n = ped.size();
-  
-  FLTT A[n*n];
-  amatrix(ped, A);
-  std::cout<<n<<'\n';
-  for(i=0; i<n; ++i)
-    for(j=0; j<=i; ++j)
-      for(k=0; k<sizeof(FLTT); ++k) std::cout<<((char*)&A[i*n+j])[k];
-  
-  return 0;
 }
