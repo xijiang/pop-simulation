@@ -132,6 +132,16 @@ Given a sorted pedigre, phenotype variance and heritability (h^2), this program 
 * Using QTLs can also avoid such problems.
 
 
+### chol.cpp
+* Cholesky decomposition
+* Row majored.
+* One-dimension array is used to store a matrix.
+* Lower triangle and D store the original matrix.
+* Upper triangle is the factor.
+* Rank is returned as long.
+* No dimension range check.
+
+
 ## Data files
 ### lnw139.ped
 * This is a sample pedigree was adapted from Lynch and Walsh 1996, pp139.
