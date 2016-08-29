@@ -17,7 +17,6 @@ int main(int argc, char *argv[])
     cerr << "Usage: "<<argv[0]<<" 1.gt 2.gt ... >merged.gt";
     return 1;
   }
-  
   int      nch(argc-1);
   ifstream fin[nch];
   int      i, j, nid, nlc[nch], bp, freq, tlc{0};

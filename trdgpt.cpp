@@ -2,6 +2,7 @@
  * Given a sorted pedigree, V_p and h^2, this program simulates geno- and 
  * phenotypes for al the individuals.
  * Or, this is the traditional way to simulate geno- and phenotypes.
+ * This is depricated as no inbreeding is considered.
  *
  *                                                  by Xijiang Yu
  *                                                  Aug. 02, 2016.

@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
     td = 0.;
     for(j=0; j<=i; ++j) td+=A[j*dim+i]*rg[j];
     std::cout<<std::setw(w)<<ped[i].pa<<std::setw(w)<<ped[i].ma<<' ';
-    std::cout<<std::setw(10)<<td+ee(rng)<<'\n';
+    std::cout<<' '<<td<<' '<<td+ee(rng)<<'\n';
   }
   return 0;
 }

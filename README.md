@@ -1,8 +1,25 @@
 # Population simulation project
+## Version history
+
+*Version 0.9*, before implementation.  Will be named 1.0 if survived several projects.
+
+* For bugs and issues
+..* Contact qtl.aas at gmail for bugs.
+..* Or the github way.
+
+You can use my codes freely, but take your own risks.
 
 ## Bash drivers
 ### drop.sh
 Simulate 3 chromosomes in parallel, drop the simulated genotypes through the founders of lnw139.ped into the pedigree.  Then merge the 3 files into one.
+
+
+### gsimu.sh
+Simulation a population through the QTL way.
+
+
+### psimu.sh
+Simulation a population with Cholesky decompostion
 
 
 ## C++ codes
@@ -140,6 +157,18 @@ Given a sorted pedigre, phenotype variance and heritability (h^2), this program 
 * Upper triangle is the factor.
 * Rank is returned as long.
 * No dimension range check.
+* Optimization will be done later.
+
+
+### fntpcd.cpp
+* phenotype simulation with an A matrix.
+* Output: pa ma genotype phenotype
+
+
+### ggtpt.cpp
+* Sample QTL loci and effects.
+* Simulate genotypes and phenotypes with Laplacian distribution.
+
 
 
 ## Data files
@@ -147,5 +176,29 @@ Given a sorted pedigre, phenotype variance and heritability (h^2), this program 
 * This is a sample pedigree was adapted from Lynch and Walsh 1996, pp139.
 
 
+## Example files
+### xamat.cpp
+* Construct an A matrix with a given pedigree
+
+
+## Makefiles
+### drop.makefile
+* Simulation of SNP from ideal population
+
+
+### psimu.makefile
+* Phenotype simulation with A matrix.
+
+
+### gsimu.makefile
+* Phenotype simulation with QTL.
+
 
 ## Bug history
+
+* trdgpt.cpp is depricated as it ignored inbreeding.
+
+
+## ToDo:
+ - Cholesky decomposition with AVX/AVX2.
+ - Maybe more detailed descriptions.
