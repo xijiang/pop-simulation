@@ -4,8 +4,8 @@
 *Version 0.9*, before implementation.  Will be named 1.0 if survived several projects.
 
 * For bugs and issues
-..* Contact qtl.aas at gmail for bugs.
-..* Or the github way.
+** Contact qtl.aas at gmail for bugs.
+** Or the github way.
 
 You can use my codes freely, but take your own risks.
 
@@ -144,7 +144,7 @@ Given a sorted pedigre, phenotype variance and heritability (h^2), this program 
 | Argument | V_p h2 |
 | Compilation | g++ -O2 -o trdgpt trdgpt.cpp|
 
-* Note: this need to be rewrited as it didn't consider inbreeding, where the Mendelian sampling error is smaller by a factor of (1 - F-bar).
+* Note: this need to be rewrited as it didn't consider inbreeding, where the Mendelian sampling error is smaller by a factor of $(1 - \bar{F})$.
 * Using A matrix Cholesky decomposition is safer.
 * Using QTLs can also avoid such problems.
 
