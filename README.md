@@ -1,11 +1,11 @@
 # Population simulation project
 
-* [Version history](#version-history)
-* [Bash drivers](#bash-drivers)
+1. [Version history](#version-history)
+2. [Bash drivers](#bash-drivers)
   + [drop.sh](#dropsh)
   + [gsimu.sh](#gsimush)
   + [psimu.sh](#psimush)
-* [C++ codes](#c---codes)
+3. [C++ codes](#c---codes)
   + [pedsort.cpp](#pedsortcpp)
   + [extped.cpp](#extpedcpp)
   + [pgsnp.cpp](#pgsnpcpp)
@@ -17,16 +17,16 @@
   + [chol.cpp](#cholcpp)
   + [fntpcd.cpp](#fntpcdcpp)
   + [ggtpt.cpp](#ggtptcpp)
-* [Data files](#data-files)
+4. [Data files](#data-files)
   + [lnw139.ped](#lnw139ped)
-* [Example files](#example-files)
+5. [Example files](#example-files)
   + [xamat.cpp](#xamatcpp)
-* [Makefiles](#makefiles)
+6. [Makefiles](#makefiles)
   + [drop.makefile](#dropmakefile)
   + [psimu.makefile](#psimumakefile)
   + [gsimu.makefile](#gsimumakefile)
-* [Bug history](#bug-history)
-* [ToDo:](#todo-)
+7. [Bug history](#bug-history)
+8. [ToDo:](#todo-)
 
 
 ## Version history
@@ -41,6 +41,8 @@
 You can use my codes freely, but take your own risks.
 
 ## Bash drivers
+* The storylines.
+
 ### drop.sh
 Simulate 3 chromosomes in parallel, drop the simulated genotypes through the founders of lnw139.ped into the pedigree.  Then merge the 3 files into one.
 
