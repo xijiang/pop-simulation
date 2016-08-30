@@ -1,11 +1,42 @@
 # Population simulation project
+
+* [Version history](#version-history)
+* [Bash drivers](#bash-drivers)
+  + [drop.sh](#dropsh)
+  + [gsimu.sh](#gsimush)
+  + [psimu.sh](#psimush)
+* [C++ codes](#c---codes)
+  + [pedsort.cpp](#pedsortcpp)
+  + [extped.cpp](#extpedcpp)
+  + [pgsnp.cpp](#pgsnpcpp)
+  + [pdrop.cpp](#pdropcpp)
+  + [cmerge.cpp](#cmergecpp)
+  + [amatrix.cpp](#amatrixcpp)
+  + [viewg.cpp](#viewgcpp)
+  + [trdgpt.cpp](#trdgptcpp)
+  + [chol.cpp](#cholcpp)
+  + [fntpcd.cpp](#fntpcdcpp)
+  + [ggtpt.cpp](#ggtptcpp)
+* [Data files](#data-files)
+  + [lnw139.ped](#lnw139ped)
+* [Example files](#example-files)
+  + [xamat.cpp](#xamatcpp)
+* [Makefiles](#makefiles)
+  + [drop.makefile](#dropmakefile)
+  + [psimu.makefile](#psimumakefile)
+  + [gsimu.makefile](#gsimumakefile)
+* [Bug history](#bug-history)
+* [ToDo:](#todo-)
+
+
 ## Version history
 
 *Version 0.9*, before implementation.  Will be named 1.0 if survived several projects.
 
-* For bugs and issues
-** Contact qtl.aas at gmail for bugs.
-** Or the github way.
+* For bugs and issues.
+
+ 1. Contact qtl.aas at gmail for bugs.
+ 2. Or the github way.
 
 You can use my codes freely, but take your own risks.
 
@@ -144,7 +175,7 @@ Given a sorted pedigre, phenotype variance and heritability (h^2), this program 
 | Argument | V_p h2 |
 | Compilation | g++ -O2 -o trdgpt trdgpt.cpp|
 
-* Note: this need to be rewrited as it didn't consider inbreeding, where the Mendelian sampling error is smaller by a factor of $(1 - \bar{F})$.
+* Note: this need to be rewrited as it didn't consider inbreeding, where the Mendelian sampling error is smaller by a factor of (1 - \bar{F}).
 * Using A matrix Cholesky decomposition is safer.
 * Using QTLs can also avoid such problems.
 
