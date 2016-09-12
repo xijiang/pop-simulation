@@ -56,6 +56,7 @@ int main(int argc, char *argv[])
   for(auto&p:uid) if(p.second == -2){
       p.second=++id;
       cout<<id<<" 0 0 Unknown\n";
+      --td;
     }
   
   // Then all the ID in the ID column.
