@@ -123,6 +123,6 @@ int main(int argc, char *argv[])
 	std::cout<<'\n';
       }
   }
-  std::clog<<"... Done.";
+  std::clog<<"... Done.\n";
   return 0;
 }
