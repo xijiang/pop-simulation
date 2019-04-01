@@ -25,7 +25,7 @@ h2=.9999
 ./extped $ne < st.ped > et.ped
 
 # Be careful below if system thread number is less than nchr
-# then the speed will be much slow.
+# then the speed will be much slower.
 for i in `seq $nchr`; do
     ./pgsnp $ne $ng $chrLen $mr |
 	./pdrop et.ped $ne > $i.snp &
